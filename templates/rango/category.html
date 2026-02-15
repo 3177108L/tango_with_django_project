@@ -11,6 +11,8 @@
     <div>
         {% if category %}
        <h1>{{ category_name }}</h1>
+       <a href="{% url 'rango:add_page' category.slug %}"> Add New Page</a> </div> </br>
+
             {% if pages %}
         <ul>
             {% for page in pages %}
@@ -26,7 +28,7 @@
     {% endif %}
     </div>
 
-
+     
     <div>
         <a href="/rango/">Index</a>
     </div>
